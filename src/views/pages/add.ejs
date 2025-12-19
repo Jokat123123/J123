@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<main>
+    <h2>Create Thread</h2>
+    <form action="/create" method="POST">
+        <input type="text" name="title" placeholder="Thread title" required><br>
+        <textarea name="content" placeholder="Thread content"></textarea><br>
+    <select name="status" required>
+            <option value="Positive">Positive</option>
+            <option value="Negative">Negative</option>
+        </select>
+        <button type="submit">Save</button>
+    </form>
+</main>
+<%- include('../partials/footer') %>

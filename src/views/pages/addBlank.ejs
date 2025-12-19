@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+<main>
+    <h2>Add Blank Entry</h2>
+    <form action="/add-blank" method="POST" enctype="multipart/form-data">
+        <label for="img">Image:</label><br>
+        <input type="file" name="img" id="img" accept="image/*" required><br><br>
+        <label for="description">Description:</label><br>
+        <textarea name="description" id="description" required></textarea><br><br>
+        <label for="date">Date:</label><br>
+        <input type="date" name="date" id="date" required><br><br>
+        <button type="submit">Add Blank</button>
+    </form>
+</main>
+<%- include('../partials/footer') %>

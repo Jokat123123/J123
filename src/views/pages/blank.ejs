@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<main id="blank-page">
+    <h2 >This is the Blank page. Page where there is a list of all champions misspelled by Blank. If you want to add a new champion, <a href="/add-blank">click here</a>.</h2>
+    <ul>
+        <% blanks.forEach(blank => { %>
+            <li id="blank-container" class="blank-container" >
+                <% if (blank.img) { %>
+                    <img src="<%= blank.img.startsWith('/img/') ? blank.img : '/img/' + blank.img %>" alt="Blank Image" style="max-width:120px;max-height:120px;object-fit:cover;flex-shrink:0;">
+                <% } %>
+                <div id="blank-description" style="flex:1;">
+                    <p ><%= blank.description %></p>
+                    <small >Said by Blank on: <%= new Date(blank.date).toLocaleDateString() %></small>
+                </div>
+            </li>
+        <% }) %>
+    </ul>
+</main>
+<%- include('../partials/footer') %>

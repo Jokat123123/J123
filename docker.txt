@@ -1,0 +1,8 @@
+1. Otworz aplikacje MongoDB Compass
+2. Utworz nową konekcje - kontener o nazwie "fpage" oraz baze danych o nazwie "fpage", URI zostaw domyslne
+3. Otworz aplikacje Docker
+4. Otworz Comand line'a 
+5. Wklej ta komende :
+
+docker run -d --name fpage -p 27017:27017 mongo:6.0 MONGODB_URI = 'mongodb://localhost:27017'; 
+

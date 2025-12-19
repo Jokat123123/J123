@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<h2>Edit Thread</h2>
+<form action="/edit/<%= thread._id %>" method="POST">
+    <input type="text" name="title" value="<%= thread.title %>" required> <br>
+    <textarea name="content"><%= thread.content %></textarea><br>
+    <select name="status" required>
+        <option value="Positive">Positive</option>
+        <option value="Negative">Negative</option>
+    </select>
+    <button type="submit">Save changes</button>
+</form>
+
+<%- include('../partials/footer') %>

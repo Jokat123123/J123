@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<main>
+    <h1><a href="/create">Create Thread</a></h1>
+    <form id="sortForm" action="/" method="get" style="margin-bottom: 1em; display: flex; gap: 1em; align-items: center;">
+        <label for="sort">Sort by name:</label>
+        <select name="sort" id="sort" onchange="document.getElementById('sortForm').submit()">
+            <option value="az" <%= typeof sort === 'undefined' || sort === 'az' ? 'selected' : '' %>>A - Z</option>
+            <option value="za" <%= sort === 'za' ? 'selected' : '' %>>Z - A</option>
+        </select>
+        <label for="statusSort">Sort by attitude :</label>
+        <select name="statusSort" id="statusSort" onchange="document.getElementById('sortForm').submit()">
+            <option value="positive" <%= typeof statusSort === 'undefined' || statusSort === 'positive' ? 'selected' : '' %>>Positive on top</option>
+            <option value="negative" <%= statusSort === 'negative' ? 'selected' : '' %>>Negative on top</option>
+        </select>
+    </form>
+    <ul>
+        <% threads.forEach(thread => { %>
+            <li>
+                <b><%= thread.title %></b> - <%= thread.content %>  <br>  <%= thread.status %>
+                <a href="/edit/<%= thread._id %>">Edit</a>
+                <form action="/delete/<%= thread._id %>" method="POST" style="display: inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</main>
+<%-  include('../partials/footer') %>

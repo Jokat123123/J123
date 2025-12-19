@@ -1,0 +1,19 @@
+{
+  "name": "projekt-semestralny",
+  "version": "1.0.0",
+  "description": "Discord's app forum",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": ["Discord", "forum", "app"],
+  "author": "Mateusz Przybylo",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "mongodb": "^7.0.0",
+    "multer": "^2.0.2"
+  }
+}

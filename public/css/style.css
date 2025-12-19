@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6fa;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+header {
+    background: #2d3e50;
+    color: #fff;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #ffd700;
+}
+
+main {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 30px 40px;
+}
+
+h2 {
+    color: #2d3e50;
+    margin-top: 0;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    font-size: 1em;
+    background: #f9fafb;
+    box-sizing: border-box;
+}
+
+form button {
+    background: #2d3e50;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+form button:hover {
+    background: #ffd700;
+    color: #222;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f9fafb;
+    margin-bottom: 15px;
+    padding: 18px 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li b {
+    font-size: 1.1em;
+    color: #2d3e50;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    padding: 20px 0 10px 0;
+    background: #f4f6fa;
+    font-size: 0.95em;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 40px;
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 20px 10px;
+    }
+}
+
+#about-description {
+    font-size: 1.1em;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+#blank-container {
+    margin-bottom: 20px;
+    display: flex;
+     align-items: center; 
+    gap: 24px;
+}
+
+#blank-description {
+    text-align: left;
+    color: #888;
+    flex:1;
+}
+
+#blank-description img {
+    max-width:120px;
+    max-height:120px;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+#blank-description p {
+    text-align:left;
+    margin:0 0 8px 0;
+}
+
+#blank-page h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
