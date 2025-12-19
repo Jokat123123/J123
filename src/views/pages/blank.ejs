@@ -2,17 +2,41 @@
 <main id="blank-page">
     <h2 >This is the Blank page. Page where there is a list of all champions misspelled by Blank. If you want to add a new champion, <a href="/add-blank">click here</a>.</h2>
     <ul>
-        <% blanks.forEach(blank => { %>
-            <li id="blank-container" class="blank-container" >
-                <% if (blank.img) { %>
-                    <img src="<%= blank.img.startsWith('/img/') ? blank.img : '/img/' + blank.img %>" alt="Blank Image" style="max-width:120px;max-height:120px;object-fit:cover;flex-shrink:0;">
-                <% } %>
-                <div id="blank-description" style="flex:1;">
-                    <p ><%= blank.description %></p>
-                    <small >Said by Blank on: <%= new Date(blank.date).toLocaleDateString() %></small>
-                </div>
-            </li>
-        <% }) %>
+        <% if (blanks && blanks.length > 0) { %>
+            <% blanks.forEach(blank => { %>
+                <li id="blank-container" class="blank-container" >
+                    <% if (blank.img) { %>
+                        <img src="<%= blank.img.startsWith('/img/') ? blank.img : '/img/' + blank.img %>" alt="Blank Image" style="max-width:120px;max-height:120px;object-fit:cover;flex-shrink:0;">
+                    <% } %>
+                    <div id="blank-description" style="flex:1;">
+                        <p ><%= blank.description %></p>
+                        <small >Said by Blank on: <%= new Date(blank.date).toLocaleDateString() %></small>
+                    </div>
+                </li>
+            <% }) %>
+        <% } %>
+      
+        <li id="blank-container" class="blank-container">
+            <img src="/img/FiddleSticks_0.png" alt="Blank Image" style="max-width:120px;max-height:120px;object-fit:cover;flex-shrink:0;">
+            <div id="blank-description" style="flex:1;">
+                <p>"Fingersticks"</p>
+                <small>Said by Blank on: 09.03.2025</small>
+            </div>
+        </li>
+        <li id="blank-container" class="blank-container">
+            <img src="/img/krakus.jpeg" alt="Blank Image" style="max-width:120px;max-height:120px;object-fit:cover;flex-shrink:0;">
+            <div id="blank-description" style="flex:1;">
+                <p>"Krakus"</p>
+                <small>Said by Blank on: 04.03.2025</small>
+            </div>
+        </li>
+        <li id="blank-container" class="blank-container">
+            <img src="/img/Teemo_0.jpg" alt="Blank Image" style="max-width:120px;max-height:120px;object-fit:cover;flex-shrink:0;">
+            <div id="blank-description" style="flex:1;">
+                <p>"Timet"</p>
+                <small>Said by Blank on: 03.03.2025</small>
+            </div>
+        </li>
     </ul>
 </main>
 <%- include('../partials/footer') %>
